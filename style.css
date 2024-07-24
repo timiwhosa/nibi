@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family:  "Inter", sans-serif;
+    letter-spacing: -1px;
+}
+:root{
+    --primaryColor: #FFB400;
+    --white: #ffffff;
+    --black: #000000;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.nibi-logo{
+    position: fixed;
+    top: 40px;
+    left: 80px;
+}
+/* button */
+.btn{
+    outline: none;
+    border: none;
+}
+.btn-primary{
+    background-color: var(--primaryColor);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px 6px rgba(255, 179, 0, 0.25), 0px 4px 20px 4px rgba(255, 179, 0, 0.25);
+}
+/* margin, padding and spacing*/
+.pt-20{
+    padding-top: 20px;
+}
+.pt-40{
+    padding-top: 40px;
+}
+.gap10{
+    gap: 10px;
+}
+/* grid */
+.grid{
+    display: grid;
+} 
+.width-maxContent{
+    width: max-content;
+} 
+/* Flex */
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-alc{
+    align-items: center;
+}
+.flex-1{
+    flex-grow: 1;
+}
+.flex-sbw{
+    justify-content: space-between;
+    width: 100%;
+}
+/* images */
+.bg-img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg-taxiAd{
+    background-image: url("./img/taxiAd.jpg");
+}
+/* width & height classes */
+.width-100{
+    width: 100vw;
+} 
+.height-100{
+    height: 100vh;
+}
+/* text classes */
+.t-underline{
+    text-decoration: underline;
+}
+.t-center{
+    text-align: center;
+}
+    /* Large view  */
+.t-80{
+ font-size: 80px;
+}
+.t-40{
+    font-size: 40px;
+}
+.t-20{
+    font-size: 20px;
+}
+.t-16{
+    font-size: 16px;
+}
+.t-12{
+    font-size: 12px;
+}
+  
+.t-light{
+    font-weight: 300; /*use better props later */
+}
+.t-regular{
+    font-weight: 400;
+}
+.t-medium{
+    font-weight: 500;
+
+}
+.italic{
+    font-style: italic;
+} 
+.smbold{
+ font-weight: 600;
+}
+
+.t-black{
+    color: #000000;
+}
+
+/* section classes */
+.Mainsec-two{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+.left{
+    flex-direction: column;
+    padding: 0 40px 0 80px;
+}
+.left-end{
+    justify-content: end;
+    align-items: flex-start;
+    padding-bottom: 15vh;
+}
+/* div classes */
+
+
+@media screen and (max-width:480px) {
+    body,html{
+        overflow: visible;
+    }
+    .nibi-logo{
+        top: 20px;
+        left: 20px;
+    }
+    /* Small screen text */
+    .t-80{
+    font-size: 40px;
+    }
+    .t-40{
+        font-size: 20px;
+    }
+    .t-20{
+        font-size: 18px;
+    }
+    .t-16{
+        font-size: 14px;
+    }
+    .t-12{
+        font-size: 12px;
+    }
+    .Mainsec-two{ 
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    } 
+    .left{
+        padding: 0 40px;
+        text-align: center;
+        position: absolute;
+        top: 20vh;
+        color: white;
+        width: calc(100vw - 80px);
+    }
+    .left-end{
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .s-pt-20{
+        padding-top: 20vh;
+    }
+    .Mainsec-two .right{
+        flex-grow: 1;
+    }
+    .width-maxContent{
+        width: 100%;
+    }
+}
