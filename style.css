@@ -200,4 +200,7 @@ html,body{
     .width-maxContent{
         width: 100%;
     }
+    .right{
+        margin: 0;
+    }
 }
