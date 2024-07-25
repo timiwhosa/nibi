@@ -72,7 +72,7 @@ html,body{
     background-repeat: no-repeat;
 }
 .bg-taxiAd{
-    background-image: url("./img/taxiAd.jpg");
+    background-image: url("./img/nibiTaxiad.jpg");
 }
 /* width & height classes */
 .width-100{
@@ -141,6 +141,9 @@ html,body{
     align-items: flex-start;
     padding-bottom: 15vh;
 }
+.right{
+    margin: 5%;
+}
 /* div classes */
 
 
@@ -187,6 +190,9 @@ html,body{
     }
     .s-pt-20{
         padding-top: 20vh;
+    }
+    .bg-taxiAd{
+        background-image: url("./img/nibiTaxiad80.jpg");
     }
     .Mainsec-two .right{
         flex-grow: 1;
