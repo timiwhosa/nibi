@@ -5,6 +5,7 @@
     font-family:  "Inter", sans-serif;
     letter-spacing: -1px;
     text-decoration: none;
+    box-sizing: border-box;
     /* color: #000000; */
 }
 *::-moz-selection { /* Code for Firefox */
@@ -23,19 +24,142 @@
     --primaryColor: #FFB400;
     --white: #ffffff;
     --black: #000000;
+    --delay: 10s;
 }
 html,body{
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-.nibi-logo{
-    position: fixed;
-    top: 40px;
-    left: 80px;
 }
 body a{
     color: inherit;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.1;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+body *{
+    animation: appear 3s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+.text-primary{
+    color: var(--primaryColor);
+}
+.lineGroup{
+    height: 320px;
+}
+
+.hero *{
+    animation: none;
+    animation-timeline: auto;
+}
+.heroIcons *{
+    animation: appear 1s linear;
+    animation-timeline: auto;
+}
+.states-scroll{
+    height: 60vh;
+    /* overflow: hidden; */
+    align-items: flex-end;
+    width: 100%;
+}
+@keyframes marque{
+    50%{
+        top:100%;
+        right: 30%;
+        /* transform: translate(70%,-180%) ; */
+        opacity: .6;
+    }
+    100%{
+        top: -20%;
+        right: 50%;
+        opacity: 0;
+        /* transform: translate(90%,-240%) ; */
+    }
+}
+.state-item{
+    display: flex;
+    gap: 20px;   
+    position: absolute; 
+    top: 120%;
+    right: 50%;
+    opacity: 1;
+    transform: translate(50%,-120%);
+    animation: marque var(--delay) linear infinite;
+    white-space: nowrap;
+}
+/* .state-item:nth-child(1){
+   animation-delay: calc(var(--delay) / 36 * (36 - 1) * -1 );
+}
+
+.state-item:nth-child(2){
+    animation-delay: calc(var(--delay) / 36 * (36 - 2) * -1 );
+ } */
+/* body img{
+    animation: appear 7s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+} */
+
+
+/* input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid var(--primaryColor);
+    border-radius: 0.5rem;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: scale(0);
+    background-color: var(--white);
+  }
+  input[type="checkbox"]:checked::before {
+    clip-path: polygon(20% 50%, 40% 74%, 80% 40%, 100% 50%, 40% 100%, 0% 50%);
+    transform: scale(1);
+  } */
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid var(--primaryColor);
+    border-radius: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: scale(0);
+    background-color: var(--white);
+  }
+  input[type="checkbox"]:checked{
+    background-color: var(--primaryColor);
+  }
+  input[type="checkbox"]:checked::before {
+    clip-path: polygon(15% 30%, 40% 60%, 80% 20%, 100% 40%, 40% 100%, 0% 50%);
+    transform: scale(1);
+  }
+      
+.icons{
+    width: 40px;
+    height: auto;
 }
 /* button */
 .btn{
@@ -72,284 +196,67 @@ body a{
 .btn-primary-stroke{
     outline: 1px solid var(--primaryColor);
 }
-input[type="checkbox"]{
-    cursor: pointer;
-}
-/* margin, padding and spacing*/
-.mt-20{
-    margin-top: 20px;
-}
-.mt-40{
-    margin-top: 40px;
-}
-.pt-20{
-    padding-top: 20px;
-}
-.pt-40{
-    padding-top: 40px;
-}
-.gap10{
-    gap: 10px;
-}
 
-.gap20{
-    gap: 20px;
-}
-/* grid */
-.grid{
-    display: grid;
-} 
-.width-maxContent{
-    width: max-content;
-} 
-/* Flex */
-.flex{
-    display: flex;
-}
-.flex-col{
-    flex-direction: column;
-}
-.flex-alc{
-    align-items: center;
-}
-.flex-ale{
-    align-items: end;
-}
-.flex-1{
-    flex-grow: 1;
-}
-.flex-sbw{
-    justify-content: space-between;
-    width: 100%;
-}
-/* images */
-.bg-img{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.bg-taxiAd{
-    background-image: url("./img/nibiTaxiad.jpg");
-}
-.bg-taxiAd2{
-    background-image: url("./img/login/nibiTaxiad2_small502.jpg");
-}
-/* width & height classes */
-.width-100{
-    width: 100vw;
-} 
-.height-100{
-    height: 100vh;
-}
-/* text classes */
-.t-underline{
-    text-decoration: underline;
-}
-.t-center{
-    text-align: center;
-}
-    /* Large view  */
-.t-80{
- font-size: 80px;
-}
-.t-40{
-    font-size: 40px;
-}
-.t-20{
-    font-size: 20px;
-}
-.t-16{
-    font-size: 16px;
-}
-.t-12{
-    font-size: 12px;
-}
-  
-.t-light{
-    font-weight: 300; /*use better props later */
-}
-.t-regular{
-    font-weight: 400;
-}
-.t-medium{
-    font-weight: 500;
-
-}
-.italic{
-    font-style: italic;
-} 
-.smbold{
- font-weight: 600;
-}
-
-.t-black{
-    color: #000000;
-}
-/* input fields */
-.input-primary{
-    background-color: transparent;
-    outline: 1px solid var(--primaryColor);
-    border: none;
-    border-radius: 8px;
-    padding: 20px 20px;
-}
-
-/* section classes */
-.Mainsec-two{ 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} 
-.left{
-    flex-direction: column;
-    padding: 0 40px 0 80px;
-}
-.left-end{
-    justify-content: end;
-    align-items: flex-start;
-    padding-bottom: 15vh;
-}
-.right{
-    margin: 3%;
-}
-/* div classes */
-/* overlay */
-.overlay {
-    display: none;
-    position: fixed;
+/* heroIcons */
+.heroIcons{
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0px 0px 16px 6px rgba(255, 179, 0, 0.25), 0px 4px 20px 4px rgba(255, 179, 0, 0.25);
-    z-index: 1000;
+    transform: translate(-50%,-50%);
+}
+.heroIcons >img{
+    position: absolute;
+    max-width: 40px;
+    width: 40px;
+    height: 40px;
+}
+.heroIcons img:nth-child(1){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(250%, -640%);
+}
+.heroIcons img:nth-child(2){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(650%, 120%);
+}
+.heroIcons img:nth-child(3){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(0, -540%);
+}
+.heroIcons img:nth-child(4){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(-750%, 185%);
+}
+.heroIcons img:nth-child(5){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(-450%, -740%);
+}
+.heroIcons img:nth-child(6){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(-1145%, 72%) rotate(-45deg);
+}
+.heroIcons img:nth-child(7){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(550%, -508%) rotate(45deg);
+}
+.heroIcons img:nth-child(8){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(-809%, -540%);
+}
+.heroIcons img:nth-child(9){
+    /* left: 5vw;
+    top: -50vh; */
+    transform: translate(981%, -250%);
 }
 
-.background {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    z-index: 999;
-}
-/* Code Box */
-.code-box {
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-
-.code-box span {
-    flex-grow: 1;
-    padding: 0 10px;
-}
-
-.code-box button {
-    transition: background-color 0.3s ease;
-}
-
-.code-box button:hover {
-    background-color: #ff9800; /* darker shade of primary color */
-}
-
-/* Checkbox and Submit Button */
-.checkbox-container {
-    margin-bottom: 20px;
-}
-
-.checkbox-container input[type="checkbox"] {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.submit-button {
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:disabled {
-    background-color: #ccc !important;
-    cursor: not-allowed;
-}
-
-.submit-button:hover:not(:disabled) {
-    background-color: #ff9800; /* darker shade of primary color */
-}
-
-@media screen and (max-width:480px) {
-    body,html{
-        overflow: visible;
-    }
-    .nibi-logo{
-        top: 20px;
-        left: 20px;
-    }
-    /* Small screen text */
-    .ts-white{
-        color: white;
-    }
-    .t-80{
-    font-size: 40px;
-    }
-    .t-40{
-        font-size: 20px;
-    }
-    .t-20{
-        font-size: 18px;
-    }
-    .t-16{
-        font-size: 14px;
-    }
-    .t-12{
-        font-size: 12px;
-    }
-    .gridonSmall{
-        display: grid;
-    }
-    .Mainsec-two{ 
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-    } 
-    .left{
-        padding: 0 40px;
-        text-align: center;
-        position: absolute;
-        top: 20vh;
-        color: white;
-        width: calc(100vw - 80px);
-    }
-    .left-end{
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 0;
-    }
-    .s-pt-20{
-        padding-top: 20vh;
-    }
-    .bg-taxiAd{
-        background-image: url("./img/nibiTaxiad80.jpg");
-    }
-    .Mainsec-two .right{
-        flex-grow: 1;
-    }
-    .width-maxContent{
-        width: 100%;
-    }
-    .right{
-        margin: 0;
-    }
-    
-    .overlay {
-        padding: 20px;
-        width: calc(100% - 40px);
-        max-width: 300px;
+@media screen and (max-width: 400px) {
+    .heroIcons{
+        display: none;
     }
 }

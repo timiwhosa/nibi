@@ -1,71 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <title>Nibi</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <a href="/"><img src="/img/logo.svg" class="nibi-logo" alt="nibi logo"></a>
-
-    <section class="Mainsec-two width-100 height-100">
-        <div class="left flex left-end pb-120">
-            <h1 class="t-80 t-medium">
-                Nibi Taxi Ads:
-            </h1>
-            <div class="grid width-maxContent">
-            <p class="subheader t-40">
-                <span class="t-light">connecting Businesses</span> <br> <span class="t-regular">to millions of</span> <span class="italic smbold">commuters</span>
-            </p>
-            <p class="flex t-16 flex-sbw pt-20">
-                <span>1M+ Taxis</span>
-                <span>20M Daily commuters</span>
-                <span>50 locations</span>
-            </p>
-            </div>
-            <div class="flex flex-col flex-alc gap10 pt-40 s-pt-20">
-                <div class="flex flex-ale gap20 gridonSmall">
-                    <div class="flex flex-col flex-alc gap10">
-                        <p class="t-16 t-center">
-                            Ready to promote your 
-                            <!-- <br/>  -->
-                            business?
-                        </p>
-                        <a href="https://wa.me/2347078065016"><button class="btn btn-big btn-primary t-20 t-black t-medium gap10">  
-                            <img src="/img/whatsapp-svgrepo-com.svg" alt=""> Claim Your Space
-                        </button></a>
-                    </div>
-                    <div class="flex flex-col flex-alc gap10">
-                        <p class="t-16 t-center">
-                            Existing user?
-                        </p>
-                        <button class="btn btn-big btn-primary-stroke t-20 t-black t-medium gap10 ts-white" onclick="toggleoverlay()(true)"> Login
-                        </button>
-                    </div>
-                </div>
-                <p class="t-12 flex-center t-underline"> <a href="https://wa.me/07078065016">Leave us a message</a></p>
-            </div>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tailwind.min.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" 
+      rel="stylesheet"
+    /> -->
+  </head>
+  <body class="overflow-x-hidden">
+    <section class="p-20 pt-10 w-full h-screen">
+      <header class="h-full w-full flex flex-col items-center justify-between">
+        <nav class="flex justify-between items-center w-full">
+          <a href="/"
+            ><img
+              src="./img/logo.svg"
+              class="nibi-logo"
+              alt="nibi taxi media logo"
+          /></a>
+          <div
+            class="flex rounded-3xl border-black border-2 w-max h-max py-5 gap-5 text-2xl underline"
+          >
+            <span class="t-underline px-5"> <a href="#">About Nibi</a></span>
+            <span class="relative block w-0.5 h-10 bg-black"></span>
+            <span class="t-underline px-5"><a href=""> Rates</a></span>
+          </div>
+        </nav>
+        <div
+          class="relative hero text-center relative flex flex-col items-center justify-items-end"
+        >
+          <p class="text-base">Promote your work in Every Taxi, Everyday</p>
+          <h1 class="text-8xl font-medium tracking-tighter">Nibi Taxi Media</h1>
+          <h2 class="text-9xl font-light opacity-20 -mt-16 tracking-tighter">
+            the new media
+          </h2>
+          <p class="flex items-center gap-2">
+            <span><img src="./img/icons/award2.svg" class="icons h-6" /></span>
+            <span> Nigeria's first Digital taxi media Platform </span>
+            <span><img src="./img/icons/award.svg" class="icons h-6" /></span>
+          </p>
+          <button
+            class="btn btn-primary gap-5 flex gap-5 text-2xl px-10 py-5 mt-10"
+          >
+            <span>Promote your work </span>
+            <img src="./img/icons/speakerWhite.svg" class="icons rotate-45" />
+          </button>
+          <div class="heroIcons absolute">
+            <img src="./img/icons/bluetooth.svg" alt="" class="icons" />
+            <img src="./img/icons/headset.svg" alt="" class="icons" />
+            <img src="./img/icons/mediaPlay.svg" alt="" class="icons" />
+            <img src="./img/icons/mic.svg" alt="" class="icons" />
+            <img src="./img/icons/portableSpeaker.svg" alt="" class="icons" />
+            <img src="./img/icons/speaker.svg" alt="" class="icons" />
+            <img src="./img/icons/speaker1.svg" alt="" class="icons" />
+            <img src="./img/icons/taxi.svg" alt="" class="icons" />
+            <img src="./img/icons/taxi.svg" alt="" class="icons" />
+          </div>
         </div>
-        <div class="right flex-1 bg-img bg-taxiAd">
-            
-        </div>
+      </header>
     </section>
-    <div class="overlay t-16" id="overlay">
-        <div class="overlay-content grid gap20">
-            <h2 class="t-40 smbold">Coming Soon</h2>
-          <!-- <h2 class="t-40 smbold">Enter Campaign Code</h2>
-          <p>Please enter the code we gave you.</p>
-          <input type="text" name="" id="" class="input-primary">
-          <button class="btn btn-medium btn-primary t-20" id="submitButton">Login</button> -->
+    <section class="px-20 pt-40 flex flex-col items-center">
+      <div>
+        <h2 class="text-9xl w-full">
+          Digital <span class="font-bold">Screens</span> &
+          <span class="font-bold">speakers</span> in every Taxi -
+        </h2>
+        <p class="text-5xl w-full">to Amplify your message</p>
+      </div>
+      <img
+        src="./img/assets/nibi in taxi.jpg"
+        alt="nibi display in a taxi"
+        class="rounded-xl mt-20"
+      />
+      <div class="text-4xl text-center mt-10">
+        <h3 class="w-full font-bold">Reimagine visibility;</h3>
+        <p class="w-full">Promote your work to a relaxed Audience</p>
+      </div>
+    </section>
+    <section class="px-20 py-40">
+      <div>
+        <p class="text-6xl text-center opacity-20">Simply</p>
+        <h2 class="text-8xl text-center">Choose your Location</h2>
+        <p class="text-8xl text-center opacity-20 -mt-14">
+          & taxis start promoting you there
+        </p>
+      </div>
+      <div class="grid grid-cols-2 w-full px-20 pt-20">
+        <div class="scroll-container flex justify-center items-center">
+          <div class="states-scroll text-4xl relative"></div>
+        </div>
+        <div class="flex justify-start">
+          <div class="flex flex-col items-end justify-center gap-10 w-max">
+            <p class="opacity-80 text-6xl text-right">Start Showcasing now</p>
+            <button
+              class="flex items-center w-max btn-primary-stroke btn-big text-20 gap-5"
+            >
+              <img src="./img/icons/trophy.svg" alt="" class="w-5 h-5" />
+              <span> Promote me </span>
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 12H18M18 12L13 7M18 12L13 17"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="background"></div>
+    </section>
+    <section class="px-20 py-40">
+      <h2 class="text-8xl">
+        <span class="font-bold text-primary">Nibi</span> turns
+        <span class="relative">
+          <img src="./img/icons/citymapper.svg" alt="nibi transit" class="w-20 h-20 absolute -top-10 left-1/3" />
+          transit
+        </span>
+        into a storytelling highway
+      </h2>
+      <div class="lineGroup flex flex-col justify-center items-center ">
+        <span class="dot  block rounded-full w-5 h-5 bg-black"></span>
+        <span class="line block  w-1 h-full bg-black"></span>
+        <span class="dot  block rounded-full w-5 h-5 bg-black"></span>
 
-      <script src="/js/main.js"></script>
-</body>
+      </div>
+      <h2 class="text-8xl">
+        <span class="font-bold"> In-taxi displays </span> play <span class="text-6xl">your</span> Promotions
+        <span class="text-4xl">through Nibi's Driver app </span>
+      </h2>
+      <img src="" alt="nibi intaxi display gif " />
+      <h3>Your <span>Brand</span>, in <span>Passengers</span> front</h3>
+    </section>
+    <section class="flex">
+      <div>
+        <h3>1,000 Taxi's = 1million+ Audience -</h3>
+        <p>Don't just see Buses, See your <span>Publicity</span> medium</p>
+        <button class="btn btn-primary-stroke text-20">
+          cease it now !!
+          <img src="./img/icons/hold.svg" alt="" />
+        </button>
+      </div>
+      <div class="relative">
+        <img src="" alt="" />
+        <img src="" alt="" />
+      </div>
+    </section>
+    <section>
+      <h2>Grow with Nibi</h2>
+      <h3>
+        Your powerful communication channel. No matter your <span>Hustle</span>
+      </h3>
+    </section>
+
+    <script>
+      // List of states
+      const states = [
+        "Abia",
+        "Adamawa",
+        "Akwa Ibom",
+        "Anambra",
+        "Bauchi",
+        "Bayelsa",
+        "Benue",
+        "Borno",
+        "Cross River",
+        "Delta",
+        "Ebonyi",
+        "Edo",
+        "Ekiti",
+        "Enugu",
+        "Gombe",
+        "Imo",
+        "Jigawa",
+        "Kaduna",
+        "Kano",
+        "Katsina",
+        "Kebbi",
+        "Kogi",
+        "Kwara",
+        "Lagos",
+        "Nasarawa",
+        "Niger",
+        "Ogun",
+        "Ondo",
+        "Osun",
+        "Oyo",
+        "Plateau",
+        "Rivers",
+        "Sokoto",
+        "Taraba",
+        "Yobe",
+        "Zamfara",
+        "FCT",
+      ];
+
+      // Get the container
+      const container = document.querySelector(".states-scroll");
+
+      // Generate state-item elements
+      states.forEach((state, index) => {
+        const item = document.createElement("div");
+        item.className = "state-item";
+        item.innerHTML = `
+        <span>${state}</span>
+        <input type="checkbox" />
+    `;
+        const delay = 10; // seconds
+        // Apply animation styles dynamically
+        const animationDelay = `calc(${delay}s / ${states.length} * (${
+          states.length - index - 1
+        }) * -1)`;
+        item.style.animationDelay = animationDelay;
+        item.style.top = `${120 - index * 5}%`;
+        item.style.right = `${
+          50 + (index % 2 === 0 ? index * 2 : -index * 2)
+        }%`;
+
+        // Add item to the container
+        container.appendChild(item);
+      });
+
+      // Define the total number of items and delay
+      // const totalItems = 36;
+      // const delay = 10; // seconds
+
+      // // Select all .state-item elements
+      // const stateItems = document.querySelectorAll(".state-item");
+
+      // // Apply the animation delay to each element
+      // stateItems.forEach((item, index) => {
+      //   const animationDelay = `calc(${delay}s / ${totalItems} * (${totalItems} - ${
+      //     index //+ 1
+      //   }) * -1)`;
+      //   item.style.animationDelay = animationDelay;
+      // });
+    </script>
+  </body>
 </html>
