@@ -132,6 +132,9 @@ body *{
     width: 40px;
     height: auto;
 }
+section{
+    overflow-x: hidden;
+}
 /* button */
 .btn{
     border: none;
