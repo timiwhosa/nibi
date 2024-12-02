@@ -235,6 +235,9 @@ body *{
         animation-duration: 1.5s;
     } */
      body *{
-        animation-name: none !important;
+        animation-name: none;
      }
+     .state-item{
+        animation: marque var(--delay) linear infinite;
+    }
 }
