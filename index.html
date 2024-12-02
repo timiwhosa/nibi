@@ -16,8 +16,10 @@
     /> -->
   </head>
   <body class="overflow-x-hidden">
-    <section class="p-20 pt-10 w-full h-screen">
-      <header class="h-full w-full flex flex-col items-center justify-between">
+    <section class="p-5 md:p-20 md:pt-10 w-full h-screen">
+      <header
+        class="h-full w-full flex flex-col items-center md:justify-between overflow-hidden"
+      >
         <nav class="flex justify-between items-center w-full">
           <a href="/"
             ><img
@@ -26,53 +28,167 @@
               alt="nibi taxi media logo"
           /></a>
           <div
-            class="flex rounded-3xl border-black border-2 w-max h-max py-5 gap-5 text-2xl underline"
+            class="flex items-center rounded-3xl border-black border-2 w-max h-max py-2 md:py-5 gap-5 text-lg md:text-2xl underline"
           >
-            <span class="t-underline px-5"> <a href="#">About Nibi</a></span>
+            <span class="t-underline px-2 md:px-5">
+              <a href="#about">About Nibi</a></span
+            >
             <span class="relative block w-0.5 h-10 bg-black"></span>
-            <span class="t-underline px-5"><a href=""> Rates</a></span>
+            <span class="t-underline px-2 md:px-5"
+              ><a href="https://wa.me/2347078065016"> Rates</a></span
+            >
           </div>
         </nav>
         <div
-          class="relative hero text-center relative flex flex-col items-center justify-items-end"
+          class="relative hero text-center flex flex-col w-full items-center md:justify-items-end flex-1 justify-center md:flex-none"
         >
           <p class="text-base">Promote your work in Every Taxi, Everyday</p>
-          <h1 class="text-8xl font-medium tracking-tighter">Nibi Taxi Media</h1>
-          <h2 class="text-9xl font-light opacity-20 -mt-16 tracking-tighter">
+          <h1 class="text-6xl md:text-8xl font-medium tracking-tighter">
+            Nibi Taxi Media
+          </h1>
+          <h2
+            class="text-6xl -mt-6 md:text-9xl font-light opacity-20 md:-mt-16 tracking-tighter"
+          >
             the new media
           </h2>
           <p class="flex items-center gap-2">
-            <span><img src="./img/icons/award2.svg" class="icons h-6" /></span>
-            <span> Nigeria's first Digital taxi media Platform </span>
-            <span><img src="./img/icons/award.svg" class="icons h-6" /></span>
+            <span
+              ><img src="./img/icons/award2.svg" class="icons h-4 md:h-6"
+            /></span>
+            <span class="text-xs md:text-base">
+              Nigeria's first Digital taxi media Platform
+            </span>
+            <span
+              ><img src="./img/icons/award.svg" class="icons h-4 md:h-6"
+            /></span>
           </p>
-          <button
-            class="btn btn-primary gap-5 flex gap-5 text-2xl px-10 py-5 mt-10"
+          <a
+            href="https://wa.me/2347078065016"
+            class="w-max block mx-auto my-0"
           >
-            <span>Promote your work </span>
-            <img src="./img/icons/speakerWhite.svg" class="icons rotate-45" />
-          </button>
+            <button
+              class="btn btn-primary md:gap-5 flex gap-2 md:gap-5 text-lg md:text-2xl p-4 md:px-10 md:py-5 mt-10"
+            >
+              <!-- <img src="./img/icons/taxi white.svg" class="icons rotate-45" /> -->
+              <img
+                src="./img/icons/speakerWhite.svg"
+                class="icons btn-rotate"
+              />
+              <span>Promote your brand in Taxis </span>
+              <svg
+                width="40px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 12H18M18 12L13 7M18 12L13 17"
+                  stroke="#ffffff"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </a>
           <div class="heroIcons absolute">
-            <img src="./img/icons/bluetooth.svg" alt="" class="icons" />
-            <img src="./img/icons/headset.svg" alt="" class="icons" />
-            <img src="./img/icons/mediaPlay.svg" alt="" class="icons" />
-            <img src="./img/icons/mic.svg" alt="" class="icons" />
-            <img src="./img/icons/portableSpeaker.svg" alt="" class="icons" />
-            <img src="./img/icons/speaker.svg" alt="" class="icons" />
-            <img src="./img/icons/speaker1.svg" alt="" class="icons" />
-            <img src="./img/icons/taxi.svg" alt="" class="icons" />
-            <img src="./img/icons/taxi.svg" alt="" class="icons" />
+            <img
+              src="./img/icons/bluetooth.svg"
+              alt="nibi taxi media bluetooth"
+              class="icons"
+            />
+            <img
+              src="./img/icons/headset.svg"
+              alt="nibi taxi media headset"
+              class="icons"
+            />
+            <img
+              src="./img/icons/mediaPlay.svg"
+              alt="nibi taxi media play"
+              class="icons"
+            />
+            <img
+              src="./img/icons/mic.svg"
+              alt="nibi taxi media mic"
+              class="icons"
+            />
+            <img
+              src="./img/icons/portableSpeaker.svg"
+              alt="nibi taxi media portableSpeaker"
+              class="icons"
+            />
+            <img
+              src="./img/icons/speaker.svg"
+              alt="nibi taxi media speaker"
+              class="icons"
+            />
+            <img
+              src="./img/icons/speaker1.svg"
+              alt="nibi taxi media speaker"
+              class="icons"
+            />
+            <img
+              src="./img/icons/taxi.svg"
+              alt="nibi taxi media taxi"
+              class="icons"
+            />
+            <img
+              src="./img/icons/taxi.svg"
+              alt="nibi taxi media taxi"
+              class="icons"
+            />
           </div>
         </div>
       </header>
     </section>
-    <section class="px-20 pt-40 flex flex-col items-center">
+    <section class="p-5 md:px-20 md:pt-40 flex flex-col items-center">
       <div>
-        <h2 class="text-9xl w-full">
-          Digital <span class="font-bold">Screens</span> &
+        <!-- <h2 class="text-9xl w-full relative">
+          Digital 
+          <span class="font-bold">Screens</span> &
           <span class="font-bold">speakers</span> in every Taxi -
+          <img
+            src="./img/assets/nibi mockups/nibi-mockup-shoeseller.gif"
+            class="object-contain absolute right-1/4 -mt-20 rounded-full"
+            alt="shoe seller using nibi to promote his business in taxis"
+          />
+        </h2> -->
+        <!-- <h2 class="text-8xl w-full relative">
+          Your message on Taxi
+          <span class="font-bold text-9xl">Screens</span> &
+          <span class="font-bold text-9xl">speakers</span> everywhere-
+          <img
+            src="./img/assets/nibi mockups/nibi-mockup-shoeseller.gif"
+            class="object-contain absolute right-1/4 -mt-20 rounded-full"
+            alt="shoe seller using nibi to promote his business in taxis"
+          />
+        </h2> -->
+        <!-- <h2 class="text-4xl md:text-8xl w-full relative">
+          10k+ Passengers Daily with
+          <span class="font-bold text-6xl md:text-9xl">Ads</span> in <br />
+           <span class="font-bold text-6xl md:text-9xl">Taxis</span>-
+          <img
+            src="./img/assets/nibi mockups/nibi-mockup-shoeseller.gif"
+            class="object-contain md:absolute md:right-1/4 md:-mt-20 rounded-full"
+            alt="shoe seller using nibi to promote his business in taxis"
+          />
+        </h2> -->
+        <h2 class="text-4xl md:text-8xl w-full relative">
+          Show Ads to 1m+
+          <span class="font-bold text-6xl md:text-9xl">Passengers</span> daily
+          through <br />
+          <span class="font-bold text-6xl md:text-9xl">Taxis</span>-
+          <img
+            src="./img/assets/nibi mockups/nibi-mockup-shoeseller.gif"
+            class="object-contain md:absolute md:right-1/4 md:-mt-20 rounded-full"
+            alt="shoe seller using nibi to promote his business in taxis"
+          />
         </h2>
-        <p class="text-5xl w-full">to Amplify your message</p>
+        <p class="text-4xl w-full mt-5">
+          speak directly to passengers
+          <!-- to Amplify your message -->
+        </p>
       </div>
       <img
         src="./img/assets/nibi in taxi.jpg"
@@ -81,90 +197,194 @@
       />
       <div class="text-4xl text-center mt-10">
         <h3 class="w-full font-bold">Reimagine visibility;</h3>
-        <p class="w-full">Promote your work to a relaxed Audience</p>
+        <p class="w-full text-2xl md:text-4xl">Promote your work to a relaxed Audience</p>
       </div>
     </section>
-    <section class="px-20 py-40">
+    <section class="p-5 md:px-20 py-40">
       <div>
-        <p class="text-6xl text-center opacity-20">Simply</p>
-        <h2 class="text-8xl text-center">Choose your Location</h2>
-        <p class="text-8xl text-center opacity-20 -mt-14">
+        <p class="text-4xl md:text-6xl text-center opacity-20">Simply</p>
+        <h2 class="text-6xl md:text-8xl text-center">Choose your Location</h2>
+        <p class="text-3xl md:text-8xl text-center opacity-20 -mt-6 md:-mt-14">
           & taxis start promoting you there
         </p>
       </div>
-      <div class="grid grid-cols-2 w-full px-20 pt-20">
+      <div class="flex flex-col md:grid md:grid-cols-2 w-full md:px-20 pt-20">
         <div class="scroll-container flex justify-center items-center">
           <div class="states-scroll text-4xl relative"></div>
         </div>
         <div class="flex justify-start">
           <div class="flex flex-col items-end justify-center gap-10 w-max">
-            <p class="opacity-80 text-6xl text-right">Start Showcasing now</p>
-            <button
-              class="flex items-center w-max btn-primary-stroke btn-big text-20 gap-5"
-            >
-              <img src="./img/icons/trophy.svg" alt="" class="w-5 h-5" />
-              <span> Promote me </span>
-              <svg
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <p class="opacity-80 text-6xl text-right">
+              Start Showcasing your brand Now!!
+            </p>
+            <a href="https://wa.me/2347078065016" class="w-max block">
+              <button
+                class="flex items-center w-max btn-primary-stroke btn-big text-20 gap-5"
               >
-                <path
-                  d="M6 12H18M18 12L13 7M18 12L13 17"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
+                <img src="./img/icons/trophy.svg" alt="" class="w-5 h-5" />
+                <span> Promote me </span>
+                <svg
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12H18M18 12L13 7M18 12L13 17"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <section class="px-20 py-40">
-      <h2 class="text-8xl">
-        <span class="font-bold text-primary">Nibi</span> turns
-        <span class="relative">
-          <img src="./img/icons/citymapper.svg" alt="nibi transit" class="w-20 h-20 absolute -top-10 left-1/3" />
+    <section class="p-5 md:px-20 md:flex justify-center gap-5">
+      <div class="w-full justify-items-center">
+        <img
+          src="./img/assets/nibi mockups/nibi-mockup-shoeseller.gif"
+          class="object-contain"
+          alt="shoe seller using nibi to promote his business in taxis"
+        />
+        <h2 class="text-5xl font-bold py-20 opacity-40">
+          Different Campaigns, <br />
+          same media.
+        </h2>
+      </div>
+      <div class="w-full">
+        <img
+          src="./img/assets/nibi mockups/nibi-mockup-playing guitar.gif"
+          class="w-full h-full object-contain"
+          alt="shoe seller using nibi to promote his business in taxis"
+        />
+      </div>
+    </section>
+    <section class="p-5 md:px-20 py-40">
+      <h2 class="text-5xl md:text-8xl">
+        <!-- <span class="font-bold text-primary">Nibi</span> turns -->
+        Turn
+        <span class="font-bold"> Taxis </span>
+        Into Your Brand Promotion Space
+        <!-- <span class="relative">
+          <img
+            src="./img/icons/citymapper.svg"
+            alt="nibi transit"
+            class="w-20 h-20 absolute -top-10 left-1/3"
+          />
           transit
         </span>
-        into a storytelling highway
+        into your storytelling highway -->
       </h2>
-      <div class="lineGroup flex flex-col justify-center items-center ">
-        <span class="dot  block rounded-full w-5 h-5 bg-black"></span>
-        <span class="line block  w-1 h-full bg-black"></span>
-        <span class="dot  block rounded-full w-5 h-5 bg-black"></span>
-
+      <div class="lineGroup flex flex-col justify-center items-center my-10">
+        <span class="dot block rounded-full w-5 h-5 bg-black"></span>
+        <span class="line block w-1 h-full bg-black"></span>
+        <span class="dot block rounded-full w-5 h-5 bg-black"></span>
       </div>
-      <h2 class="text-8xl">
-        <span class="font-bold"> In-taxi displays </span> play <span class="text-6xl">your</span> Promotions
+      <h2 class="text-5xl md:text-8xl">
+        <span class="font-bold"> In-taxi displays </span> play
+        <span class="text-6xl">your</span> Campaigns
         <span class="text-4xl">through Nibi's Driver app </span>
       </h2>
-      <img src="" alt="nibi intaxi display gif " />
-      <h3>Your <span>Brand</span>, in <span>Passengers</span> front</h3>
-    </section>
-    <section class="flex">
-      <div>
-        <h3>1,000 Taxi's = 1million+ Audience -</h3>
-        <p>Don't just see Buses, See your <span>Publicity</span> medium</p>
-        <button class="btn btn-primary-stroke text-20">
-          cease it now !!
-          <img src="./img/icons/hold.svg" alt="" />
-        </button>
-      </div>
-      <div class="relative">
-        <img src="" alt="" />
-        <img src="" alt="" />
-      </div>
-    </section>
-    <section>
-      <h2>Grow with Nibi</h2>
-      <h3>
-        Your powerful communication channel. No matter your <span>Hustle</span>
+      <img
+        src="./img/assets/nibisampleAdplay.gif"
+        alt="nibi intaxi display gif "
+        class="my-10"
+      />
+      <h3 class="text-5xl text-center">
+        Your <span class="font-bold">Brand</span>, in
+        <span class="font-bold">Passengers</span> front
       </h3>
+    </section>
+    <section class="p-5 md:px-20 py-40 grid md:grid-cols-2 gap-10 items-start">
+      <div class="justify-self-end lg:mt-20">
+        <h3 class="text-5xl width-280 font-bold mb-7">
+          1,000 Taxi's = 1million+ Audience-
+        </h3>
+        <p class="text-3xl opacity-40">
+          Don't just see Buses, See <br />
+          your <span class="font-bold">Publicity</span> medium
+        </p>
+        <a href="https://wa.me/2347078065016" class="w-max block">
+          <button
+            class="btn btn-primary-stroke mt-5 text-20 flex justify-self-start rounded-xl gap-5 p-5 text-xl"
+          >
+            cease it now !!
+            <img
+              src="./img/icons/hold.svg"
+              alt="use nibi now"
+              class="icons rotate-45"
+            />
+          </button>
+        </a>
+      </div>
+      <div class="relative justify-self-start">
+        <img
+          src="./img/assets/busyStreetTaxi.jpg"
+          alt="nibi in a busy street with taxis"
+          class="w-3/4 h-auto"
+        />
+        <img
+          src="./img/assets/busyStreetTaxi1.jpg"
+          alt=" busy street with taxis"
+          class="absolute w-1/2 h-auto absolute -bottom-1/4 left-1/4 md:-left-1/4"
+        />
+      </div>
+    </section>
+    <section class="p-5 md:px-20 py-40" id="about">
+      <h2 class="text-6xl md:text-9xl text-center font-bold opacity-20 pb-10">Nibi:</h2>
+      <p class="text-4xl md:text-6xl">
+        connecting <span class="font-bold text-6xl md:text-8xl">You </span> with
+        <span class="font-bold text-6xl md:text-8xl">commuters, </span>
+        <!-- for -->
+        <span class="text-4xl md:text-6xl opacity-60">
+          for targeted Visibility, in all Area an Locality
+          <!-- optimized, hyper-localized visibility. -->
+        </span>
+      </p>
+      <p class="opacity-40 text-4xl">
+        Your Innovative in-taxi media technology
+      </p>
+
+      <!-- <p class="text-5xl">
+        Your Unique in-taxi media technology, you use to connect directly with commuters, delivering optimized & hyper-localized visibility through an innovative in-taxi media experience. 
+      </p> -->
+    </section>
+    <section class="p-5 md:px-20 py-40 mb-20 md:mb-0">
+      <h2 class="font-bold text-6xl md:text-8xl text-center">
+        Grow with Nibi <span class="font-normal">Now!!</span>
+      </h2>
+      <h3 class="text-3xl md:text-4xl opacity-40 text-center">
+        Your powerful communication channel. No matter your <br />
+        <span class="font-bold">Hustle</span>
+      </h3>
+      <a href="https://wa.me/2347078065016" class="w-max block mx-auto my-0">
+        <button
+          class="btn btn-big btn-primary-stroke gap-5 flex gap-5 text-2xl px-10 py-5 mt-10"
+        >
+          <span>Lets get started </span>
+          <svg
+            width="40px"
+            height="20px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 12H18M18 12L13 7M18 12L13 17"
+              stroke="#000000"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <!-- <img src="./img/icons/speaker.svg" class="icons btn-rotate" /> -->
+        </button>
+      </a>
     </section>
 
     <script>

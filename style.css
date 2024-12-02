@@ -21,7 +21,8 @@
     cursor:not-allowed !important;
 }
 :root{
-    --primaryColor: #FFB400;
+    --primaryLight: #ffb3008c;
+    --primaryColor:#ffb400;
     --white: #ffffff;
     --black: #000000;
     --delay: 10s;
@@ -43,9 +44,14 @@ body a{
     }
 }
 body *{
-    animation: appear 3s linear;
+    animation: appear 3s cubic-bezier(0.4, 0, 0.2, 1);
     animation-timeline: view();
     animation-range: entry 0 cover 30%;
+    will-change: opacity, transform;
+    transform: translateZ(0);
+}
+.bg-primaryLight{
+    background-color: var(--primaryLight);
 }
 .text-primary{
     color: var(--primaryColor);
@@ -68,18 +74,19 @@ body *{
     align-items: flex-end;
     width: 100%;
 }
+.width-280{
+    width: 280px;
+}
 @keyframes marque{
     50%{
         top:100%;
         right: 30%;
-        /* transform: translate(70%,-180%) ; */
         opacity: .6;
     }
     100%{
         top: -20%;
         right: 50%;
         opacity: 0;
-        /* transform: translate(90%,-240%) ; */
     }
 }
 .state-item{
@@ -93,42 +100,6 @@ body *{
     animation: marque var(--delay) linear infinite;
     white-space: nowrap;
 }
-/* .state-item:nth-child(1){
-   animation-delay: calc(var(--delay) / 36 * (36 - 1) * -1 );
-}
-
-.state-item:nth-child(2){
-    animation-delay: calc(var(--delay) / 36 * (36 - 2) * -1 );
- } */
-/* body img{
-    animation: appear 7s linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
-} */
-
-
-/* input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size: 2rem;
-    padding: 0.1rem;
-    border: 0.25rem solid var(--primaryColor);
-    border-radius: 0.5rem;
-  }
-  input[type="checkbox"]::before {
-    content: "";
-    width: 1.4rem;
-    height: 1.4rem;
-    transform: scale(0);
-    background-color: var(--white);
-  }
-  input[type="checkbox"]:checked::before {
-    clip-path: polygon(20% 50%, 40% 74%, 80% 40%, 100% 50%, 40% 100%, 0% 50%);
-    transform: scale(1);
-  } */
   input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -196,6 +167,9 @@ body *{
 .btn-primary-stroke{
     outline: 1px solid var(--primaryColor);
 }
+.btn-rotate{
+    transform: rotate(-25deg);
+}
 
 /* heroIcons */
 .heroIcons{
@@ -256,7 +230,8 @@ body *{
 }
 
 @media screen and (max-width: 400px) {
-    .heroIcons{
-        display: none;
+    body *{
+        animation-range: entry 0 cover 40%;
+        animation-duration: 1.5s;
     }
 }
