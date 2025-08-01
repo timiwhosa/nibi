@@ -1,11 +1,11 @@
-import Link from "next/link";
+import Image from "next/image";
 
 
 export default function Nav() {
   return (
     <nav className="flex justify-between items-center w-full ">
       <a href="/#">
-        <img src="/img/logo.svg" className="h-10" alt="nibi taxi media logo" />
+        <Image src="/img/logo.svg" width={40} height={40} className="h-10 w-auto" alt="nibi taxi media logo" />
       </a>
       <div className="flex items-center rounded-3xl border-black border-2 w-max h-max py-2 md:py-5 gap-5 text-lg md:text-2xl underline">
         <span className="px-2 md:px-5">

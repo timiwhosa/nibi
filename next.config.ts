@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  rules: {
+    "react/no-unescaped-entities": "off"
+  }
 };
 
 export default nextConfig;
