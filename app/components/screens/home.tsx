@@ -38,16 +38,17 @@ export default function HomePage() {
           </h2>
 
           {/* <div className="flex items-center gap-2"> */}
-          <div className="relative flex flex-row outline pl-10 pr-5 pt-5 pb-4 rounded-full gap-1 bg-white items-center mt-10 mb-5">
+          <label className="relative flex flex-row outline pl-10 pr-5 pt-5 pb-4 rounded-full gap-1 bg-white items-center mt-10 mb-5">
             <span className="font-medium text-slate-400 text-xl">Nibi.ng/</span>
             <input
               type="text"
+              id="nibiInput"
               className="border-none outline-none text-2xl min-w-[20px] max-w-[150px] max-h-[40px] tracking-[3px] font-black mr-[50px]"
             />
             <span className="text-white cursor-pointer absolute right-0 top-0 h-full aspect-square rounded-full border border-primary flex items-center justify-center bg-primary">
               <ArrowBigRightDash size={40} className="" />
             </span>
-          </div>
+          </label>
           <a href="https://wa.me/2347078065016" className="text-sm underline text-center cursor-pointer">Contact Us</a>
           {/* <span className="h-full flex-1 aspect-square rounded-full border-red border max-h-[68px] bg-white flex items-center justify-center"> View</span>
           </div> */}
